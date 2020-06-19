@@ -1,0 +1,49 @@
+{
+  "editor.fontSize": 15,
+  "terminal.integrated.fontSize": 15,
+  "telemetry.enableTelemetry": false,
+  "editor.suggestSelection": "first",
+
+  "files.trimTrailingWhitespace": true,
+  "todo-tree.tree.showScanModeButton": false,
+  "[markdown]": {
+        "files.trimTrailingWhitespace": false
+    },
+
+    "git.ignoreMissingGitWarning": true,
+    "spellright.recheckOnSave": true,
+
+        "editor.autoClosingQuotes": "never",
+    "editor.autoSurround": "never",
+    "editor.autoClosingBrackets": "never",
+
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "window.zoomLevel": 1,
+
+  // prettier
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": false,
+
+  "workbench.colorTheme": "Dracula Soft",
+
+  // vim
+  "vim.cursorStylePerMode.normal": "block",
+  "vim.handleKeys": {
+    "<C-w>": false,
+    "<C-s>": false,
+    "<C-e>": false,
+    "<C-a>": false
+  },
+  "vim.insertModeKeyBindings": [
+     {
+         "before": ["j", "k"],
+         "after": ["<esc>"]
+     },
+     {
+         "before": ["k", "j"],
+         "after": ["<esc>"]
+     }
+  ],
+  "vim.highlightedyank.enable": true,
+  "vim.useSystemClipboard": true
+}

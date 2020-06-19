@@ -1,0 +1,17 @@
+code \
+  --install-extension abusaidm.html-snippets \
+  --install-extension ban.spellright \
+  --install-extension bierner.markdown-preview-github-styles \
+  --install-extension cweijan.vscode-autohotkey-plus \
+  --install-extension dracula-theme.theme-dracula \
+  --install-extension esbenp.prettier-vscode \
+  --install-extension GrapeCity.gc-excelviewer \
+  --install-extension Gruntfuggly.todo-tree \
+  --install-extension kirozen.wordcounter \
+  --install-extension mikestead.dotenv \
+  --install-extension ms-azuretools.vscode-docker \
+  --install-extension ms-python.python \
+  --install-extension ms-vscode-remote.remote-wsl \
+  --install-extension SimonSiefke.prettier-vscode \
+  --install-extension VisualStudioExptTeam.vscodeintellicode \
+  --install-extension vscodevim.vim \
