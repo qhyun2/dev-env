@@ -1,49 +1,112 @@
 {
+  //
+  // editor
+  //
   "editor.fontSize": 15,
   "terminal.integrated.fontSize": 15,
-  "telemetry.enableTelemetry": false,
+  "workbench.colorTheme": "Deepdark Material Theme | Full Black Version",
   "editor.suggestSelection": "first",
-
-  "files.trimTrailingWhitespace": true,
-  "todo-tree.tree.showScanModeButton": false,
-  "[markdown]": {
-        "files.trimTrailingWhitespace": false
-    },
-
-    "git.ignoreMissingGitWarning": true,
-    "spellright.recheckOnSave": true,
-
-        "editor.autoClosingQuotes": "never",
-    "editor.autoSurround": "never",
-    "editor.autoClosingBrackets": "never",
-
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.zoomLevel": 1,
-
-  // prettier
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "telemetry.enableTelemetry": false,
+  "todo-tree.tree.showScanModeButton": false,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+  //
+  // formatting
+  //
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": false,
-
-  "workbench.colorTheme": "Dracula Soft",
-
+  "editor.formatOnSave": true,
+  "editor.autoClosingQuotes": "never",
+  "editor.autoSurround": "never",
+  "editor.autoClosingBrackets": "never",
+  "C_Cpp.clang_format_sortIncludes": true,
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}",
+  //
   // vim
+  //
   "vim.cursorStylePerMode.normal": "block",
+  "vim.highlightedyank.enable": true,
+  "vim.useSystemClipboard": true,
   "vim.handleKeys": {
     "<C-w>": false,
     "<C-s>": false,
     "<C-e>": false,
-    "<C-a>": false
+    "<C-a>": false,
+    "<C-f>": false
   },
   "vim.insertModeKeyBindings": [
-     {
-         "before": ["j", "k"],
-         "after": ["<esc>"]
-     },
-     {
-         "before": ["k", "j"],
-         "after": ["<esc>"]
-     }
+    {
+      "before": ["j", "k"],
+      "after": ["<esc>"]
+    },
+    {
+      "before": ["k", "j"],
+      "after": ["<esc>"]
+    }
   ],
-  "vim.highlightedyank.enable": true,
-  "vim.useSystemClipboard": true
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<esc>"]
+    },
+    {
+      "before": ["k", "j"],
+      "after": ["<esc>"]
+    }
+  ],
+  //
+  // git
+  //
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.ignoreMissingGitWarning": true,
+  //
+  // latex
+  //
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
+  "latex-workshop.latex.build.clearLog.everyRecipeStep.enabled": true,
+  "latex-workshop.latex.autoBuild.run": "onFileChange",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "XeLaTeX",
+      "tools": ["xelatex"]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "xelatex",
+      "command": "xelatex",
+      "args": [
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-synctex=1",
+        "%DOC_EXT%"
+      ],
+      "env": {}
+    }
+  ],
+  //
+  // spelling
+  //
+  "cSpell.enabled": false,
+  "spellright.recheckOnSave": true,
+  "cSpell.userWords": ["biject", "gamification", "multiset", "multisets"],
+  //
+  // other
+  //
+  "remote.SSH.remotePlatform": {
+    "uw-cs-linux": "linux",
+    "uw": "linux"
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "python.languageServer": "Microsoft",
+  "diffEditor.ignoreTrimWhitespace": false
 }
