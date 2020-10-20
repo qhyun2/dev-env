@@ -1,0 +1,55 @@
+
+[user]
+    name = Howard Yun
+    email = haoy2001@gmail.com
+    username = qhyun2
+[core]
+    editor = vim
+    whitespace = fix,-indent-with-non-tab,trailing-space
+
+[delta]
+    features = line-numbers decorations
+    line-numbers = true
+
+[alias]
+    a = add --all
+    ai = add -i
+    #############
+    b = branch
+    #############
+    c = commit
+    cm = commit -m
+    cd = commit --amend
+    #############
+    cp = cherry-pick
+    cpa = cherry-pick --abort
+    cpc = cherry-pick --continue
+    #############
+    d = diff
+    dp = diff --patience
+    dc = diff --cached
+    dk = diff --check
+    dck = diff --cached --check
+    dt = difftool
+    dct = difftool --cached
+    #############
+    f = fetch
+    fo = fetch origin
+    fu = fetch upstream
+    #############
+    l = log --oneline
+    lg = log --oneline --graph --decorate
+    #############
+    ls = ls-files
+    lsf = !git ls-files | grep -i
+    #############
+    m = merge
+    #############
+    o = checkout
+    om = checkout master
+    ob = checkout -b
+    opr = !sh -c 'git fo pull/$1/head:pr-$1 && git o pr-$1'
+    #############
+    s = status
+    #############
+

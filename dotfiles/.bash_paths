@@ -1,3 +1,17 @@
 export PATH="/usr/local/texlive/2020/bin/x86_64-linux/:$PATH"
+export PATH="$PATH:/mnt/c/Users/Howard/Documents/CS/Scripts/Bash"
+
 export MANPATH=":$MANPATH"
 export INFOPATH=":$INFOPATH"
+
+TZ=America/New_York
+EDITOR=vim
+BROWSER=firefox
+
+
+# make less better
+# X = leave content on-screen
+# F = quit automatically if less than one screenfull
+# R = raw terminal characters (fixes git diff)
+#     see http://jugglingbits.wordpress.com/2010/03/24/a-better-less-playing-nice-with-git/
+export LESS="-F -X -R"
