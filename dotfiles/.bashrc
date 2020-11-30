@@ -150,3 +150,10 @@ n ()
             rm -f "$NNN_TMPFILE" > /dev/null
     fi
 }
+
+# wsl setup
+
+# route display stuff to VcXsrv
+if grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null ; then
+    export DISPLAY=`grep -oP "(?<=nameserver ).+" /etc/resolv.conf`:0.0
+fi

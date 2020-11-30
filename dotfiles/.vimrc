@@ -93,6 +93,10 @@ set tm=500
 " Add a bit extra margin to the left
 set foldcolumn=1
 
+" Turn of bell
+set visualbell 
+set t_vb=
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

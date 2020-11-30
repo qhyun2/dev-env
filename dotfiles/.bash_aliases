@@ -17,6 +17,7 @@ alias gaa="git add ."
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias wh='cd /mnt/c/Users/Howard'
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -31,3 +32,6 @@ alias reload="exec ${SHELL} -l"
 
 # print paths
 alias path='echo -e ${PATH//:/\\n}'
+
+# cpp
+alias nodemonmake='nodemon -e cc,h --exec "make || exit 1"'
