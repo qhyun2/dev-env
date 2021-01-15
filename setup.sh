@@ -1,35 +1,34 @@
 #!/bin/bash
-
 set -e
 
+# set cwd to folder containing script
 cd "${0%/*}"
 
-OLD_DOTFILES="dotfile_bk_$(date -u +"%Y%m%d%H%M%S")"
-mkdir $OLD_DOTFILES
+OLD_DOTFILES="$HOME/dotfiles_bk_$(date -u +"%Y-%m-%d_%H_%M_%S")"
+mkdir "$OLD_DOTFILES"
 
 function backup_if_exists() {
-    if [ -f $1 ];
+    FILE="$HOME/$1"
+    if [ -f "$FILE" ];
     then
-      mv $1 $OLD_DOTFILES
+      mv "$FILE" "$OLD_DOTFILES"
     fi
-    if [ -d $1 ];
+    if [ -d "$FILE" ];
     then
-      mv $1 $OLD_DOTFILES
+      mv "$FILE" "$OLD_DOTFILES"
     fi
 }
 
-# Clean common conflicts
-backup_if_exists ~/.bash_profile
-backup_if_exists ~/.bashrc
-backup_if_exists ~/.gitconfig
-backup_if_exists ~/.tmux.conf
+# backup conflicts
+for f in $(ls -A dotfiles); do
+  backup_if_exists "$f"
+done
 
-
-
-# Install FZF (fuzzy finder on the terminal and used by a Vim plugin).
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
-
-# Create symlinks to various dotfiles.
+# create symlinks to dotfiles
 stow dotfiles
 
-echo Done
+# Install FZF (fuzzy finder on the terminal and used by a Vim plugin)
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf  || true
+~/.fzf/install
+
+echo DONE

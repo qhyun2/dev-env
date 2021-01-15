@@ -152,7 +152,11 @@ n ()
 }
 
 # wsl setup
+
 # route display stuff to VcXsrv
 if grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null ; then
     export DISPLAY=`grep -oP "(?<=nameserver ).+" /etc/resolv.conf`:0.0
 fi
+
+# temp stuff
+source /home/howard/cs241/tools/setup.bash
