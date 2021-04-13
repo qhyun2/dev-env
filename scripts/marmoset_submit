@@ -1,3 +1,4 @@
+echo $@
 #!/bin/bash
 if [ $# -lt 3 ]; then
 	echo "Usage: marmoset_submit course project file [...]"
@@ -16,13 +17,18 @@ shift
 shift
 TEMP=`tempfile --suffix=.zip`
 rm $TEMP
+echo zip -j $TEMP "$@"
 zip -j $TEMP "$@"
+
+echo "Zipped"
 
 # create temp file on remote and transfer it over
 REMOTE="qhyun@linux.student.cs.uwaterloo.ca"
 RTEMP=`ssh $REMOTE "tempfile --suffix=.zip"`
 ssh $REMOTE rm $RTEMP
 scp $TEMP $REMOTE:$RTEMP
+
+echo "Copied to server"
 
 ~/dev-env/scripts/marmoset.py "$COURSE" "$ASSIGN" $RTEMP
 rm $TEMP
