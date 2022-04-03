@@ -3,7 +3,9 @@ alias mv="mv -i"           # -i prompts before overwrite
 alias mkdir="mkdir -p"     # -p make parent dirs as needed
 alias df="df -h"           # -h prints human readable format
 alias free="free -h"       # -h prints human readable format
-alias sapt="sudo apt -y"
+alias apt="sudo apt -y"
+alias ffmpeg="ffmpeg -hide_banner"
+alias ffprobe="ffprobe -hide_banner"
 
 alias we="explorer.exe ."  # open cwd in windows explorer (for wsl)
 
@@ -14,10 +16,12 @@ alias g="git"
 alias gs="git status"
 alias gaa="git add ."
 
+# custom ls-logo for current wsl
+alias ls='logo-ls -h'
+
 # ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias ll='ls -Al'
+alias l='ls -l'
 alias wh='cd /mnt/c/Users/Howard'
 alias ..="cd .."
 alias ...="cd ../.."
@@ -36,3 +40,9 @@ alias path='echo -e ${PATH//:/\\n}'
 
 # cpp
 alias nodemonmake='nodemon -e cc,h --exec "make || exit 1"'
+
+# youtube-dl
+alias youtube-dl-audio='youtube-dl --ignore-errors --output "%(title)s.%(ext)s" --extract-audio --audio-format mp3'
+
+# terraform
+alias tf="terraform"
