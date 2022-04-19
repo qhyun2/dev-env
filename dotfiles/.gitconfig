@@ -19,7 +19,8 @@
     #############
     c = commit
     cm = commit -m
-    cd = commit --amend
+    ca = commit --amend
+    can = commit --amend --no-edit
     #############
     cp = cherry-pick
     cpa = cherry-pick --abort
@@ -50,7 +51,7 @@
     ob = checkout -b
     opr = !sh -c 'git fo pull/$1/head:pr-$1 && git o pr-$1'
     #############
-    s = status
+    s = status -sb
     #############
 
 [filter "lfs"]
