@@ -17,7 +17,11 @@ alias gs="git status"
 alias gaa="git add ."
 
 # custom ls-logo for current wsl
-alias ls='logo-ls -h'
+if command -v logo-ls &> /dev/null
+then
+    alias ls='logo-ls -h'
+fi
+
 
 # ls aliases
 alias ll='ls -Al'

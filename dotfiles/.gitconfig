@@ -52,7 +52,11 @@
     opr = !sh -c 'git fo pull/$1/head:pr-$1 && git o pr-$1'
     #############
     s = status -sb
-    #############
+    su= "!f() {                  \
+        git stash;               \
+        git stash -u;            \
+        git stash pop stash@{1}; \
+        }; f"
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
