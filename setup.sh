@@ -25,7 +25,7 @@ for f in $(ls -A dotfiles); do
 done
 
 # create symlinks to dotfiles
-stow dotfiles
+./stow.sh
 
 # Install FZF (fuzzy finder on the terminal and used by a Vim plugin)
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf  || true

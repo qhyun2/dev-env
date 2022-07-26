@@ -13,8 +13,8 @@ alias fucking="sudo "
 
 # git
 alias g="git"
-alias gs="git status"
-alias gaa="git add ."
+alias gs="git s"
+alias ga="git a"
 
 # custom ls-logo for current wsl
 if command -v logo-ls &> /dev/null

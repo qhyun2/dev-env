@@ -1,11 +1,3 @@
-export PATH="/usr/local/texlive/2020/bin/x86_64-linux/:$PATH"
-export PATH="$PATH:/mnt/c/Users/Howard/Documents/CS/Scripts/Bash"
-export PATH="$PATH:$HOME/dev-env/scripts"
-export PATH="$PATH:/usr/bin/android-platform-tools"
-
-export MANPATH=":$MANPATH"
-export INFOPATH=":$INFOPATH"
-
 export TZ=America/New_York
 export EDITOR=vim
 export BROWSER=firefox
@@ -18,4 +10,3 @@ export ADB=/usr/bin/android-platform-tools/adb
 # R = raw terminal characters (fixes git diff)
 #     see http://jugglingbits.wordpress.com/2010/03/24/a-better-less-playing-nice-with-git/
 export LESS="-F -X -R"
-
