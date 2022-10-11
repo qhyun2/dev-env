@@ -50,3 +50,8 @@ alias youtube-dl-audio='youtube-dl --ignore-errors --output "%(title)s.%(ext)s" 
 
 # terraform
 alias tf="terraform"
+
+# kubectl
+alias k=kubectl
+alias kns=kubens
+alias kctx=kubectx

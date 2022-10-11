@@ -82,6 +82,6 @@ def split_arguments(arguments, start=1):
 
 # Script starts here
 before_submit_options, after_submit_options = split_arguments(sys.argv)
-process = subprocess.Popen(["ssh", "uw"] + [marmoset_cli_path] + before_submit_options + ['submit'] + after_submit_options, stdout=subprocess.PIPE)
+process = subprocess.Popen(["ssh", "uwcs"] + [marmoset_cli_path] + before_submit_options + ['submit'] + after_submit_options, stdout=subprocess.PIPE)
 output, error = process.communicate()
 print(output.decode('utf8'))
