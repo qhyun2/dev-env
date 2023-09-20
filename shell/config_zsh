@@ -96,3 +96,10 @@ fi
 
 # opam configuration
 [[ ! -r /Users/qhyun/.opam/opam-init/init.zsh ]] || source /Users/qhyun/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+    autoload -Uz compinit
+    compinit
+fi

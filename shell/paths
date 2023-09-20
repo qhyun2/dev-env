@@ -3,6 +3,15 @@ export PATH="$PATH:/mnt/c/Users/Howard/Documents/CS/Scripts/Bash"
 export PATH="$PATH:$HOME/dev-env/scripts"
 export PATH="$PATH:/usr/bin/android-platform-tools"
 
+export PATH="$PATH:/usr/local/share/hadoop/bin"
+export PATH="$PATH:$SCALA_HOME/bin"
+export PATH="$PATH:/usr/local/share/spark/bin"
+export PATH="$PATH:/usr/local/share/maven/bin"
+
+export SCALA_HOME="/usr/local/share/scala"
+export SPARK_DIST_CLASSPATH=$(hadoop classpath)
+
+
 export MANPATH=":$MANPATH"
 export INFOPATH=":$INFOPATH"
 

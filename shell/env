@@ -3,6 +3,7 @@ export EDITOR=vim
 export BROWSER=firefox
 export ADB_SERVER_SOCKET=tcp:$(cat /etc/resolv.conf | tail -n1 | awk '{print $2}'):5037
 export ADB=/usr/bin/android-platform-tools/adb
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
 
 # make less better
 # X = leave content on-screen
